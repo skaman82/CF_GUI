@@ -1,0 +1,655 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href="styles/opensans_webfontkit/fonts.css" rel="stylesheet" type="text/css">
+<link href="styles/dropdown-lists/css/style_lists.css" rel="stylesheet" type="text/css">
+
+
+<style>
+/* Change here the content of the documentation button tn all tabs!!!  */
+
+.cf_doc_version_bt a:before {
+	content:"Documentation 1.10";
+	}
+
+/* END  */
+
+
+	body {
+	padding:0px;
+	font-family: 'open_sansregular', Arial;
+	font-size:11px;
+	line-height:15px;
+	min-width:800px;
+	float:left;
+	background-color:#fff;
+	margin:0px;
+	}
+	
+a {
+	transition: all ease 0.5s;
+	text-decoration:none;
+	color:#59aa29;
+	font-family: 'open_sansbold', Arial;
+	}
+
+a:hover {
+	transition: all ease 0.2s;
+	}
+
+	
+.cf_doc_version_bt a {
+	padding:1px 9px 1px 9px;
+	margin-top: -25px;
+	background-color:#59aa29;
+	border-radius:3px;
+	border: 1px solid #4c8829;
+	color:#fff;
+	float:right;
+	font-family: 'open_sansbold', Arial;
+	font-size:10px;
+	line-height:17px;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	text-transform:uppercase;
+	letter-spacing: 0.03em;
+	display:block;
+
+	}
+	
+.cf_doc_version_bt a:hover {
+	background-color:#6ac435;
+	}
+	
+	
+	
+/* Border of the Tab */
+
+.container_border {
+	border-right:solid 1px #8C8C8C;
+	border-right-style:inset;
+	float:left;
+	padding:15px;
+	padding-left:20px;
+
+	}
+	
+	
+	
+	/* Tab Title */
+.tab_title {
+	float:left;
+	width:100%;
+	border-bottom:1px solid #59aa29;
+	font-size:20px;
+	line-height:24px;
+	height:30px;	
+	font-family: 'open_sanslight', Arial;
+	margin-bottom:7px;
+	}
+	
+/* Note */
+.note {
+	float:left;
+	background-color:#fff7cd;
+	border:1px solid #ffe55f;
+	margin-bottom:7px;
+	margin-top:3px;
+	width:100%;
+	border-radius: 3px;
+	font-size:11px;
+	}
+
+.note_spacer {
+	padding:5px 7px 5px 7px;
+	}
+	
+
+/* Colums  START> */
+
+.column {
+	min-height:20px;
+	margin-bottom:10px;
+
+	}	
+	
+	
+.full {
+	float:left;
+	width:100%;
+	}
+	
+.half {
+	float:left;
+	width:50%;
+	}
+	
+
+
+.third_left {
+	float:left;
+	width:33%;
+	}
+	
+.third_center {
+	display: inline-block;
+	width:34%;
+	}
+	
+.third_right {
+	float:right;
+	width:33%;
+	}
+	
+	
+.fourth {
+	float:left;
+	width:25%;
+	}
+	
+	
+.threefourth_right {
+	float:right;
+	width:75%;
+	}
+	
+.threefourth_left {
+	float:left;
+	width:75%;
+	}	
+		
+.twothird {
+	float:left;
+	width:67%;
+	}	
+
+/* Columns  END> */
+
+
+/* Spacers */
+
+.spacer {
+	padding-left:7px;
+	padding-right:7px;
+
+	}
+	
+
+.spacer_left {
+	padding-left:7px;
+
+	}
+
+.spacer_right {
+	padding-right:7px;
+
+	}
+
+/* Standard GUI BOX */
+.gui_box {
+	border: 1px solid #e4e4e4;
+	border-radius:5px;
+	background-color:#FFFFFF;
+	float:left;
+	width:100%;
+	}
+	
+.grey {
+	background-color:#f5f5f5;
+	
+	}
+	
+.gui_box_titlebar {
+	background-color:#e4e4e4;
+	border-radius:3px 3px 0px 0px;
+	font-size:14px;
+	width:100%;
+	height:25px;
+	padding-bottom:0px;
+	float:left;
+	margin-bottom:7px;
+	}
+
+.spacer_box {
+	padding:10px;
+	margin-bottom:3px;
+	}
+	
+.spacer_box_title {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	margin-bottom:0px;
+
+	}
+	
+	
+/* Fixed area at the Bottom */
+
+
+.fixed_band {
+	height: 50px;
+	position:fixed;
+	background-color:#e4e4e4;
+	width:100%;
+	margin-left:-20px;
+	box-shadow:rgba(0,0,0,0.20) 0 -3px 8px ;
+	bottom: 0px;
+	z-index:1000;
+	}	
+	
+	
+.save_btn a {
+	padding:3px 13px 5px 13px;
+	margin-top: 10px;
+	margin-right:15px;
+	background-color:#59aa29;
+	border-radius:3px;
+	border: 1px solid #4c8829;
+	color:#fff;
+	float:right;
+	font-family: 'open_sansbold', Arial;
+	font-size:12px;
+	line-height:20px;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	display:block;
+	cursor:pointer;
+	}
+	
+.save_btn a:hover {
+	background-color:#6ac435;
+	}
+	
+	
+/* DIfferent buttons */
+
+
+
+.default_btn {
+	width:100%;
+	position:relative;
+	margin-bottom:7px;
+	margin-top:0px;
+	float:left;
+
+	}
+	
+	
+.default_btn a {
+	padding:5px 0px 5px 0px;
+	text-align:center;
+	background-color:#fff;
+	border-radius:5px;
+	border: 1px solid #59aa29;
+	color:#59aa29;
+	font-family: 'open_sanssemibold', Arial;
+	font-size:12px;
+	line-height:13px;
+	display:block;
+	}
+	
+.default_btn a:hover {
+	background-color:#6ac435;
+	color:#fff;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	}
+
+.default_btn a:active {
+	background-color:#4d9324;
+	transition: all ease 0.0s;
+	box-shadow:inset 0px 1px 5px rgba(0, 0, 0, 0.35);
+	}
+
+.small {
+	width:auto;
+	position:relative;
+	margin-bottom:7px;
+	margin-top:0px;
+	margin-right:5px;
+	float:left;
+
+	}
+	
+	.small a {
+	padding:3px 4px 4px 4px;
+	text-align:center;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	background-color:#acacac;
+	border-radius:3px;
+	border: 1px solid #949494;
+	color:#fff;
+	font-family: 'open_sanssemibold', Arial;
+	font-size:11px;
+	line-height:11px;
+	display:block;
+	}
+	
+.small a:hover {
+	background-color:#6ac435;
+	color:#fff;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	border: 1px solid #59aa29;
+
+	}
+
+.small a:active {
+	background-color:#878787;
+	transition: all ease 0.0s;
+	box-shadow:inset 0px 1px 5px rgba(0, 0, 0, 0.35);
+	}
+	
+	
+	.green a {
+	background-color:#59aa29;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	color:#fff;
+		border: 1px solid #59aa29;
+
+	}
+	
+	.green a:hover {
+	background-color:#6ac435;
+	border: 1px solid #4d9324;
+	text-shadow:0px 1px rgba(0, 0, 0, 0.25);
+	color:#fff;
+	}
+	
+	
+	
+
+/* Input Styling */
+
+
+
+.rxmode {
+	float:left;
+	margin-top:0px;
+	background-color:#f7f7f7;
+	font-size:11px;
+	line-height:20px;
+	border-radius:3px;
+	border: solid 1px #cdcccd;
+	outline:0px;
+	padding:3px;
+	width:100%;
+	margin-bottom:10px;
+	margin-top:7px;
+	box-shadow:inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Help Icon */
+
+
+.helpicon {
+	float:right;
+	margin-top:-14px;
+	margin-right:7px;
+	display:block;
+	height:14px;
+	width:14px;
+	opacity: 0.2;
+	background-image:url(rescources/icons/cf_icon_info_grey.svg);
+	background-size:contain;
+	background-position:center;
+
+}
+
+
+
+
+.helpicon:hover {
+	background-image:url(rescources/icons/cf_icon_info_green.svg);
+	opacity: 1.0;}
+
+/* Table styling */
+
+
+.cf_table {
+	margin-bottom:5px;
+	float:left;
+	margin-top:-5px;
+	font-size:11px;
+	}
+
+.cf_table td {
+	border:0px;
+	border-bottom: solid 1px #ccc;
+	padding-top:4px;
+	padding-bottom:4px;
+	border-style: dotted;
+
+}
+
+.noboarder td{
+	border:none;
+
+}
+
+.cf_table td:last-child {
+	text-align:right;
+}
+
+.gps_false {
+	background-color:#FF0004;
+	padding:1px 7px 2px 7px;
+	border-radius:3px;
+	color:#FFFFFF;
+	font-size:11px;
+	margin-left:3px;
+}
+
+.gps_true {
+	background-color:#59aa29;
+	padding:1px 7px 2px 7px;
+	border-radius:3px;
+	color:#FFFFFF;
+	font-size:11px;
+	margin-left:3px;
+}
+
+/* END */
+
+.mixer_canvas {
+	height:270px;
+float:left;
+	margin-bottom:10px;
+	margin-right:0px;
+	}
+
+select {
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+	}
+	
+</style>
+
+<title>Elements</title>
+</head>
+
+<body>
+<div class="container_border"><!-- should be the first DIV on each tab -->
+
+<!-- Note -->
+<div class="column full" style="margin-bottom:10px;"><div class="tab_title">Configuration
+<div class="cf_doc_version_bt"><a href="https://github.com/cleanflight/cleanflight/releases" target="_blank"></a></div>
+</div>
+<div class="note"><div class="note_spacer"><strong>Note: </strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div></div>
+</div>
+
+
+<!-- Box ROW1 -->
+
+<div class="column half"><div class="spacer_right">
+<div class="gui_box"><div class="gui_box_titlebar">
+  <div class="spacer_box_title">Mixer</div><div class="helpicon" style="display:none;"></div></div>
+<div class="spacer_box">
+<div class="mixer_canvas grey half">mixer_svg</div>
+<div class="half"><div class="spacer_left">
+
+<div class="dropdown">
+      <select name="one" class="dropdown-select">
+        <option value="">QuadX</option>
+        <option value="1">Option #1</option>
+        <option value="2">Option #2</option>
+        <option value="3">Option #3</option>
+      </select>
+    </div>
+    
+    
+    <div class="dropdown dropdown-dark">
+      <select name="profile" class="dropdown-select">
+        <option value="">Profile 1</option>
+        <option value="1">Profile 2</option>
+        <option value="2">Profile 3</option>
+      </select>
+    </div>
+
+<div class="default_btn"><a href="#">Edit Custom Mixer</a></div>
+</div></div>
+</div></div></div></div>
+
+
+<div class="column half"><div class="spacer_left">
+<div class="gui_box" style="min-height:320px;"><div class="gui_box_titlebar">
+  <div class="spacer_box_title">ESC/Motor Features</div><div class="helpicon"></div></div>
+<div class="spacer_box">half: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div></div></div></div>
+
+<!-- Box ROW2 -->
+
+<div class="column third_left"><div class="spacer_right"><div class="gui_box" style="min-height:220px;"><div class="gui_box_titlebar"><div class="spacer_box_title">1/3 tooltip test (hover here >)</div><div class="helpicon"></div></div><div class="spacer_box"><strong>USING MIN-HEINGHT to keep boxes align:</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+<div class="column third_center"><div class="spacer"><div class="gui_box" style="min-height:220px;"><div class="gui_box_titlebar"><div class="spacer_box_title">1/3</div><div class="helpicon"></div></div><div class="spacer_box"><strong>USING MIN-HEINGHT to keep boxes align:</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+<div class="column third_right"><div class="spacer_left"><div class="gui_box" style="min-height:220px;"><div class="gui_box_titlebar"><div class="spacer_box_title">1/3</div><div class="helpicon"></div></div><div class="spacer_box"><strong>USING MIN-HEINGHT to keep boxes align: </strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+
+<!-- Box ROW3 -->
+
+<div class="column fourth"><div class="spacer_right"><div class="gui_box grey" ><div class="gui_box_titlebar">
+        <div class="spacer_box_title">GPS</div><div class="helpicon"></div></div><div class="spacer_box">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="cf_table">
+    <tbody>
+      <tr>
+        <td>3D Fix</td>
+        <td><span class="gps_false">false</span><span class="gps_true">true</span></td>
+      </tr>
+      <tr>
+        <td>Sats</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>HDOP</td>
+        <td>–</td>
+      </tr> 
+      <tr>
+        <td>Latitude</td>
+        <td>–</td>
+      </tr>
+      <tr class="noboarder">
+        <td>Longitude</td>
+        <td>–</td>
+      </tr>
+    </tbody>
+  </table>
+</div> </div></div></div>
+
+<div class="column fourth">
+<div class="spacer"><div class="gui_box grey">
+<div class="gui_box_titlebar"><div class="spacer_box_title">Info</div>
+<div class="helpicon"></div></div><div class="spacer_box">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="cf_table">
+    <tbody>
+      <tr>
+        <td>Battery voltage</td>
+        <td>0 V</td>
+      </tr>
+      <tr>
+        <td>Capacity drawn</td>
+        <td>0 mAh</td>
+      </tr>
+      <tr>
+        <td>Current draw</td>
+        <td>0.00 A</td>
+      </tr>
+      <tr class="noboarder">
+        <td>RSSI</td>
+        <td> 0 %</td>
+      </tr>
+    </tbody>
+  </table></div> </div></div></div>
+<div class="column fourth"><div class="spacer"><div class="gui_box" style="min-height:220px;"><div class="gui_box_titlebar"><div class="spacer_box_title">1/4</div><div class="helpicon"></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis <a href="#">link.</a></div> </div></div></div>
+
+<div class="column fourth"><div class="spacer_left"><div class="gui_box" style="min-height:220px;"><div class="gui_box_titlebar">
+        <div class="spacer_box_title">1/4 Buttons</div><div class="helpicon"></div></div><div class="spacer_box">
+<div class="default_btn"><a href="#">Standard Button</a></div>
+<div class="default_btn green"><a href="#">Green Button (modal)</a></div>
+<div class="small green"><a href="#">Green Button (small)</a></div>
+<div class="small"><a href="#">Grey Button (small)</a></div>
+
+</div> </div></div></div>
+
+<!-- Box ROW4 -->
+
+<div class="column half">
+  <div class="spacer_right"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">1/2 Column</div><div class="helpicon"></div></div>
+  <div class="spacer_box"><div class="note"><div class="note_spacer"><strong>Note:</strong> Remember to configurate a Serial Port (via Ports tab) and choose a Serial Receiver Provider when using a Serial-based receiver.</div></div>
+
+        <select class="rxmode" name="select" size="4" id="select">
+          <option>SPEKTRUM1024</option>
+          <option>SPEKTRUM2048 </option>
+          <option>SBUS</option>
+          <option>SUMD</option>
+        </select>
+        
+      </div> 
+</div>
+    
+  </div></div>
+<div class="column fourth"><div class="spacer"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">Input Fields</div><div class="helpicon"><a href=""></a></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+<div class="column fourth"><div class="spacer_left"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">1/4</div><div class="helpicon"><a href=""></a></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+
+
+<!-- Box ROW5 -->
+
+<div class="column twothird"><div class="spacer_right"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">2/3</div><div class="helpicon"><a href=""></a></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+
+</div> </div></div></div>
+<div class="column third_right"><div class="spacer_left"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">1/3</div><div class="helpicon"><a href=""></a></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+
+
+
+<!-- ROW6 -->
+
+<div class="column threefourth_left"><div class="spacer_right"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">3/4</div><div class="helpicon"><a href=""></a></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div> </div></div></div>
+
+<div class="column fourth"><div class="spacer_left"><div class="gui_box"><div class="gui_box_titlebar"><div class="spacer_box_title">1/4</div><div class="helpicon"><a href=""></a></div></div><div class="spacer_box">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+</div> </div></div></div>
+
+
+<!-- Box ROW7 -->
+
+<div class="column full" style="margin-bottom:65px;">
+<div class="gui_box grey"><div class="spacer_box"><strong>1/1 lowerest element should have at least 65px margin at the bottom when using floating save bar</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+Elements<br>
+• Toggle/Radio<br>
+• UL/LI<br>
+• Tooltip<br>
+• Modal<br>
+</div> 
+</div>
+
+
+
+<!-- Floating save bar -->
+
+<div class="fixed_band"><div class="save_btn"><a href="#">Save settings</a></div></div>
+
+</div>
+
+
+  
+
+</body>
+</html>
